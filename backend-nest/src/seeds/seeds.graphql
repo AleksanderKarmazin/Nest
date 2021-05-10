@@ -1,0 +1,24 @@
+type Seed {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input CreateSeedInput {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input UpdateSeedInput {
+  id: Int!
+}
+
+type Query {
+  seeds: [Seed]!
+  seed(id: Int!): Seed
+}
+
+type Mutation {
+  createSeed(createSeedInput: CreateSeedInput!): Seed!
+  updateSeed(updateSeedInput: UpdateSeedInput!): Seed!
+  removeSeed(id: Int!): Seed
+}
